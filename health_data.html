@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sensor Data</title>
+</head>
+<body>
+        <h1>Sensor Data</h1>
+        <table border="1">
+                <thead>
+                        <tr>
+                                <th>ID</th>
+                                <th>Fall Detection</th>
+                                <th>Heart Rate (BPM)</th>
+                                <th>Temperature (°C)</th>
+                        </tr>
+                </thead>
+                <tbody>
+            {% for data in sensor_data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>LED Status Table</h2>
+    <table border="1">
+        <tr>
+            <th>Red LED Status</th>
+            <th>Yellow LED Status</th>
+            <th>Green LED Status</th>
+        </tr>
+        {% for row in led_status %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
