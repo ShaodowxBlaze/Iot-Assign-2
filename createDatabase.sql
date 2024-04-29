@@ -6,7 +6,7 @@ CREATE TABLE sensor_data (
     timestamp DATETIME
 );
 
-CREATE TABLE sensor_data (
+CREATE TABLE led_state (
     id INT AUTO_INCREMENT PRIMARY KEY,
     red_LED TINYINT(1),
     yellow_LED TINYINT(1),
